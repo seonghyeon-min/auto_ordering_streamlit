@@ -1,0 +1,5 @@
+pandas
+streamlit_quill
+streamlit
+selenium
+webdriver_manager
