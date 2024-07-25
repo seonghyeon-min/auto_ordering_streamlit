@@ -88,7 +88,7 @@ def main() :
 
         except Exception as err :
             st.warning('please input the csv text or take care the Error message.')
-            st.error(f'{err}')
+            st.exception(f'{err}')
     
     else :
         st.warning("🚨 check your condition (Server, ID, PW)")
