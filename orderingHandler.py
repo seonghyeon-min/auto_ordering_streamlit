@@ -7,6 +7,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.service import Service
 from selenium.common.exceptions import NoAlertPresentException, TimeoutException
+from selenium.webdriver.chrome.options import Options
+
 
 import re, time, selenium, pyperclip, json, orderingLog
 import streamlit as st
@@ -88,11 +90,12 @@ def SendKeyEvent(contribute, path) :
     orderingLog.log.info(f'{{"contribute" : "{contribute}", "path" : "{path}"}}')
 
     driver.find_element(contribute, path).send_keys(Keys.CONTROL, 'v')
-
+    
 def get_driver() :
     global driver
     
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+
     driver.maximize_window()
     driver.implicitly_wait(5)
     scale_zoomLevel(0.8)
