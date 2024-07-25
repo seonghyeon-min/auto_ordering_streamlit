@@ -80,7 +80,7 @@ def main() :
             if not Ordering_df.empty :
                 isbuttonClicked = st.button("Ordering start")
                 if isbuttonClicked :
-                    # st.text('[Test] Progressing.......ordering.....')
+                    st.text('button clicked')
                     if not orderingHandler.set_inital_setting(URL, selectServer, selectPlatformCode, serverID, serverPW, Ordering_df) : # orderings start
                         st.warning("🚨 check your condition (Server, ID, PW) --> try again")
                     else :
