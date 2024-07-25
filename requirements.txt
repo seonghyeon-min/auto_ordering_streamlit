@@ -4,4 +4,3 @@ streamlit
 selenium
 webdriver_manager
 pyperclip
-seleniumbase
