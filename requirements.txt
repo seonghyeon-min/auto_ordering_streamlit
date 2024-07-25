@@ -3,3 +3,4 @@ streamlit_quill
 streamlit
 selenium
 webdriver-manager
+pyperclip
