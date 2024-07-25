@@ -2,5 +2,5 @@ pandas
 streamlit_quill
 streamlit
 selenium
-webdriver-manager
+webdriver_manager
 pyperclip

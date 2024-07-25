@@ -17,10 +17,8 @@ import pandas as pd
 def set_inital_setting(*argv) :
     global URL
     global server
-    st.info('here?')
     orderingLog.SET_LOG()
-    
-    st.info('here22?')
+
     URL = argv[0]
     SDPURL = 'http://qt2-kic.smartdesk.lge.com/admin/master/ordering/ordering/retrieveAppOrderingList.lge?serverType=QA2'
     server = argv[1]
