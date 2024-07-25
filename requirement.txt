@@ -2,4 +2,4 @@ pandas
 streamlit_quill
 streamlit
 selenium
-webdriver_manager
+webdriver-manager
