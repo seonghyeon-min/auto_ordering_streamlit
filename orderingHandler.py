@@ -98,7 +98,7 @@ def get_driver() :
     chrome_options.add_argument('--headless')
     chrome_options.add_argument('--no-sandbox')
     
-    driver = webdriver.Chrome(service=Service(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()), chrome_options=chrome_options)
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()), options=chrome_options)
 
     driver.maximize_window()
     driver.implicitly_wait(5)
