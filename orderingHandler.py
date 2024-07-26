@@ -1,13 +1,13 @@
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.core.os_manager import ChromeType
 from selenium.webdriver.common.keys import Keys
-from selenium import webdriver
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.chrome.service import Service
 from selenium.common.exceptions import NoAlertPresentException, TimeoutException
-from selenium.webdriver.chrome.options import Options
+from selenium import webdriver
 
 
 import re, time, selenium, pyperclip, json, orderingLog
@@ -94,7 +94,7 @@ def SendKeyEvent(contribute, path) :
 def get_driver() :
     global driver
     
-    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()))
 
     driver.maximize_window()
     driver.implicitly_wait(5)
