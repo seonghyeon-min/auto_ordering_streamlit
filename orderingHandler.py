@@ -95,12 +95,11 @@ def SendKeyEvent(contribute, path) :
 def get_driver() :
     global driver
     
-    chrome_options = webdriver.Options()
-    
-    chrome_options.add_argument("--disable-gpu")
-    chrome_options.add_argument("--headless")
-    
-    driver = webdriver.Chrome(service=Service(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()), options=chrome_options)
+    options = webdriver.ChromeOptions()
+    options.add_argument('--headless')
+    options.add_argument('--disable-gpu')
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),
+                                options=options)
 
     driver.maximize_window()
     driver.implicitly_wait(5)
